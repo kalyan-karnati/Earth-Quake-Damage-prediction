@@ -42,59 +42,6 @@ d.)Building\_ownership\_use.csv
 **Table train.csv**
 
 | **Variable** | **Description** |
-| --- | --- |
-|
-
-| area\_assesed |
- |
-| --- | --- |
-
-
- | Indicates the nature of the damage assessment in terms of the areas of the building that were assessed. |
-|
-
-|
- |
-| --- |
-| Damage\_grade |
-|
- |
-|
- |
-
-
- | Damage grade assigned to the building after assessment (Target Variable)
- |
-| building\_id | A unique ID that identifies every individual building |
-| district\_id
- | District where the building is located |
-|
-
-| has\_geotechnical\_risk |
-| --- |
-
-
- | Indicates if building has geotechnical risks |
-|
-
-|
- |
-| --- |
-| has\_geotechnical\_risk\_fault\_crack |
-|
- |
-
-
- | Indicates if building has geotechnical risks related to fault cracking |
-| has\_geotechnical\_risk\_flood | Indicates if building has geotechnical risks related to flood |
-| has\_geotechnical\_risk\_land\_settlement
- | Indicates if building has geotechnical risks related to land settlement |
-| has\_geotechnical\_risk\_landslide | Indicates if building has geotechnical risks related to landslide |
-| has\_geotechnical\_risk\_liquefaction | Indicates if building has geotechnical risks related to liquefaction |
-| has\_geotechnical\_risk\_other | Indicates if building has any other geotechnical risks |
-| has\_geotechnical\_risk\_rock\_fall | Indicates if building has geotechnical risks related to rock fall |
-| has\_repair\_started | Indicates if the repair work had started |
-| vdcmun\_id | Municipality where the building is located |
 
 **Table 5.2**  **Building\_structure.csv**
 
@@ -126,109 +73,38 @@ d.)Building\_ownership\_use.csv
 | has\_superstructure\_rc\_engineered | Indicates if the superstructure of the building is made of RC(Engineered) |
 | has\_superstructure\_other | Indicates if the superstructure of the building is made of any other material |
 | condition\_post\_eq | Actual condition of the building after the earthquake |
-|
-**Table Building\_ownership\_use.csv**
 
-  1.
-ariable
- |
-## Description
- |
-|
-## building\_id
- |
-## A unique ID that identifies every individual building
- |
-|
-## district\_id
- |
-## Distrcit where the building is located
- |
-|
-## vdcum\_id
- |
-## Municipality where the building is located
- |
-|
-## ward\_id
- |
-## Ward Number in which the building is located
- |
-|
-## legal\_ownership\_status
- |
-## Legal ownership status of the land in which the building was built
- |
-|
-## count\_families
- |
-## Number of families in the building
- |
-|
-## has\_secondary\_use
- |
-## Indicates if the building is used for any secondary purpose
- |
-|
-## has\_secondary\_use\_agriculture
- |
-## Indicates if the building is secondarily used for agricultural purpose
- |
-|
-## has\_secondary\_use\_hotel
- |
-## Indicates if the building is secondarily used as hotel
- |
-|
-## has\_secondary\_use\_rental
- |
-## Indicates if the building is secondarily used for rental purpose
- |
-|
-## has\_secondary\_use\_institution
- |
-## Indicates if the building is secondarily used for institutional purpose
- |
-|
-## has\_secondary\_use\_school
- |
-## Indicates if the building is secondarily used as school
- |
-|
-## has\_secondary\_use\_industry
- |
-## Indicates if the building is secondarily used as industrial purpose
- |
-|
-## has\_secondary\_use\_health\_post
- |
-## Indicates if the building is secondarily used as health post
- |
-|
-## has\_secondary\_use\_office
- |
-## Indicates if the building is secondarily used as government office
- |
-|
-## has\_secondary\_use\_police
- |
-## Indicates if the building is secondarily used as police station
- |
-|
-## has\_secondary\_use\_other
- |
-## Indicates if the building is secondarily used as other purpose
- |
+## Data Variables Description:
 
-    1. **Exploratory Data Analysis**
+| Variable  | Description |
+| ------------- | ------------- |
+| area_assesed  |Indicates the nature of the damage assessment in terms of the areas of the building that were assessed  |
+| building_id  | A unique ID that identifies every individual building  |
+| damage_grade  |Damage grade assigned to the building after assessment (Target Variable)  |
+| district_id  | District where the building is located |
+| has_geotechnical_risk  |Indicates if building has geotechnical risks  |
+| has_geotechnical_risk_fault_crack  | Indicates if building has geotechnical risks related to fault cracking  |
+| has_geotechnical_risk_flood  |Indicates if building has geotechnical risks related to flood |
+| has_geotechnical_risk_land_settlement  | Indicates if building has geotechnical risks related to land settlement |
+| has_geotechnical_risk_landslide |Indicates if building has geotechnical risks related to landslide  |
+| has_geotechnical_risk_liquefaction |Indicates if building has geotechnical risks related to liquefaction |
+| has_geotechnical_risk_other |Indicates if building has any other  geotechnical risks  |
+| has_geotechnical_risk_rock_fall  |Indicates if building has geotechnical risks related to rock fall |
+| has_repair_started  |Indicates if the repair work had started |
+| vdcmun_id  | Municipality where the building is located |
+
+
+  
+
+**Exploratory Data Analysis**
 
 Exploratory Data Analysis refers to the critical process of performing initial investigations on data to discover patterns, to spot anomalies. The main anomalies found in the data is missing values and independency of target variable on other variables.
 
-      1. **Missing Values**
+**Missing Values**
 
 Missing is filled by method fillna( ).
 
-      1. **Chi-Square test**
+**Chi-Square test**
 
 A  **chi-squared test** , also written as _ **χ** _ **2****  test**, is a [statistical hypothesis test](https://en.wikipedia.org/wiki/Statistical_hypothesis_testing) that is [valid](https://en.wikipedia.org/wiki/Validity_(statistics)) to perform when the test statistic is [chi-squared distributed](https://en.wikipedia.org/wiki/Chi-squared_distribution) under the [null hypothesis](https://en.wikipedia.org/wiki/Null_hypothesis), specifically [Pearson's chi-squared test](https://en.wikipedia.org/wiki/Pearson%27s_chi-squared_test) and variants thereof. Pearson's chi-squared test is used to determine whether there is a [statistically significant](https://en.wikipedia.org/wiki/Statistical_significance) difference between the expected [frequencies](https://en.wikipedia.org/wiki/Frequency_(statistics)) and the observed frequencies in one or more categories of a [contingency table](https://en.wikipedia.org/wiki/Contingency_table).
 
@@ -260,11 +136,11 @@ print('Independent (fail to reject H0)')
 
 # H0(target variable is independent on given attribute)
 
-    1. **Removing Unwanted Columns**
+  **Removing Unwanted Columns**
 
 After performing chi-square we get to know the unwanted columns by rejecting the H0 or failed to reject H0.
 
-    1. **Splitting train and test data.**
+  **Splitting train and test data.**
 
 We split the dataset into two different datasets they are test data and train data.
 
@@ -275,7 +151,7 @@ X\_train, X\_test,y\_train, y\_test = train\_test\_split(data, z\_train, test\_s
 - X\_test- the data used to test the model.
 - y\_test-the test data of model.
 
-    1. **Supervised Learning**
+ **Supervised Learning**
 
 The dataset has been cleaned, pre-processed and analyzed for understanding the dataset. After such a process, and yet before coming to modeling, the dataset has to split up into two parts: Train and Test dataset. The training dataset is used to train the algorithm used to prepare an algorithm to comprehend. To learn and deliver results. It incorporates both input data and the desired output. The test datacollection is utilized to assess how well the algorithm was prepared with the traineddataset.
 
@@ -289,7 +165,7 @@ The following are Supervised Algorithms which we used for prediction
 - Naïve Bayes'.
 - Neural Networks.
 
-    1. **Naïve Bayes**
+   **Naïve Bayes**
 
 Naive Bayes is a classification algorithm for binary (two-class) and multi-class classification problems.
 
@@ -313,7 +189,7 @@ naive\_bayes.fit(X\_train,y\_train)
 
 prediction= naive\_bayes.predict(X\_test)
 
-    1. **Random Forest**
+ **Random Forest**
 
 Random Forest is a popular machine learning algorithm that belongs to the supervised learning technique. It can be used for both Classification and Regression problems in ML. It is based on the concept of ensemble learning, which is a process of combining multiple classifiers to solve a complex problem and to improve the performance of the model.
 
@@ -345,13 +221,13 @@ Parameter tuning for the model:
 - Number of Hidden layers
 - Number of Hidden nodes
 
-  1. **Testing**
+ **Testing**
 
-    1. **Black BoxTesting**
+   **Black BoxTesting**
 
 ![](RackMultipart20220826-1-yhpwpm_html_cc5b9fac4942d9d7.jpg)
 
-**Fig 5.1 Black BoxTesting**
+**Black BoxTesting**
 
 When applied to machine learning models, black box testing would mean testing machine learning models without knowing the internal details such as features of the machine learning model, the algorithm used to create the model etc. The challenge, however, is to verify the test outcome against the expected values that are known beforehand.
 
@@ -380,24 +256,20 @@ In our case n=5
 
 ![](RackMultipart20220826-1-yhpwpm_html_7a4d517eea1e78ce.png)
 
-**Fig 5.2 Confusion Matrix of Naïve Bayes**
+** Confusion Matrix of Naïve Bayes**
 
 ![](RackMultipart20220826-1-yhpwpm_html_3c7119729bf40fb1.png)
 
-**Fig 5.3 Confusion Matrix of Random Forest**
+** Confusion Matrix of Random Forest**
 
-1.
-# CONCLUSION& FUTURE SCOPE
 
-#
-
-## 6.1 Conclusion
+# Conclusion
 
 ##
 
 Thus, the aim of this project is to predict the damage grade of buildings. The Random forest algorithm is high accurate in predicting compared to Naive bayes and Decision Tree.The use K-folds the accuracy of prediction is increasing the accuracy is directly proportion to number of folds.It is also seen that damage grade 1,5 have high accuracy in prediction.
 
-**Table 6.1 Accuracy comparision**
+**Accuracy comparision**
 
 | **Algorithm** | **Accuracy** |
 | --- | --- |
@@ -407,12 +279,9 @@ Thus, the aim of this project is to predict the damage grade of buildings. The R
 
 ![](RackMultipart20220826-1-yhpwpm_html_f0c0314c31f68272.png)
 
-**Fig 6.1 Accuracy comparision**
+**Accuracy comparision**
 
 ## Future scope
-
-##
-
 In future we plan to enable maps and show colors for different grades for different building.And also to host our application on web.Also, in future we would like to collect data from real time database and a dataset with more variation and a higher quality can really boost the accuracy of our current models. Also we think that using more complex models like artificial neural networks, or applying deep learning.
 
 Maintaing a realtime data of building structure would help in better prediction and
@@ -422,8 +291,6 @@ Using hybrid models for increasing accuracy.
 Due to time and knowledge constraints we could not develop great UI/UX. As an improvement to this model, we will give priority to use progressive web app that uses better rendering tools such as angularJS that improves client side UI/UX experience.
 
 # REFERENCES
-
-##
 
 **[1]Long Wang, Xiaoqing Wang, Aixia Dou, Dongliang Wang**"Study on construction seismic damage loss assessment using RS and GIS" International Symposium on Electromagnetic compatibility, 2014.
 
