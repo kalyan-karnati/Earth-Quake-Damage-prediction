@@ -1,9 +1,4 @@
 # Earth Quake Damage Prediction
-
-**EARTHQUAKE PREDICTION MODEL**
-
-# INTRODUCTION
-
   
 ## Motivation
 
@@ -29,21 +24,12 @@ Earthquake are quite fatal and can cause quite a loss. Those that occur in the w
 7. Visulazing confusion matrix.
 
 
-    1. **Dataset**
+ **Dataset**
 
-The dataset used in this project is downloaded from Kaggle[7]. It is a dataset containing 4 csv files:
+The dataset used in this project is downloaded from Kaggle[7]. It is a dataset containing csv files:
 
-a.)train.csv
 
-b.)Building\_structure.csv
-
-d.)Building\_ownership\_use.csv
-
-**Table train.csv**
-
-| **Variable** | **Description** |
-
-**Table 5.2**  **Building\_structure.csv**
+ **Building\_structure.csv**
 
 | **Variable** | **Description** |
 | --- | --- |
@@ -151,6 +137,8 @@ X\_train, X\_test,y\_train, y\_test = train\_test\_split(data, z\_train, test\_s
 - X\_test- the data used to test the model.
 - y\_test-the test data of model.
 
+# ALGORITHMS
+
  **Supervised Learning**
 
 The dataset has been cleaned, pre-processed and analyzed for understanding the dataset. After such a process, and yet before coming to modeling, the dataset has to split up into two parts: Train and Test dataset. The training dataset is used to train the algorithm used to prepare an algorithm to comprehend. To learn and deliver results. It incorporates both input data and the desired output. The test datacollection is utilized to assess how well the algorithm was prepared with the traineddataset.
@@ -165,7 +153,7 @@ The following are Supervised Algorithms which we used for prediction
 - Naïve Bayes'.
 - Neural Networks.
 
-   **Naïve Bayes**
+**Naïve Bayes**
 
 Naive Bayes is a classification algorithm for binary (two-class) and multi-class classification problems.
 
@@ -201,7 +189,7 @@ random\_forest.fit(X\_train,y\_train)
 
 prediction= random\_forest.predict(X\_test)
 
-    1. **Neural Networks**
+**Neural Networks**
 
 The Model is a Neural network with 307 inputs and 3 hidden layers and 8 categories/bins:
 
@@ -221,13 +209,8 @@ Parameter tuning for the model:
 - Number of Hidden layers
 - Number of Hidden nodes
 
- **Testing**
-
-   **Black BoxTesting**
-
-![](RackMultipart20220826-1-yhpwpm_html_cc5b9fac4942d9d7.jpg)
-
-**Black BoxTesting**
+ 
+ **Black BoxTesting**
 
 When applied to machine learning models, black box testing would mean testing machine learning models without knowing the internal details such as features of the machine learning model, the algorithm used to create the model etc. The challenge, however, is to verify the test outcome against the expected values that are known beforehand.
 
@@ -236,11 +219,11 @@ When applied to machine learning models, black box testing would mean testing ma
 | [16,6,324,0,0,0,22,0,0,0,0,0,0] | 0 | 0 |
 | [16,7,263,7,0,2,700,9,10,1153,832,9,2] | 1 | 1 |
 
-**Table 5.4 Example Black Box Testing**
+**Example Black Box Testing**
 
-The model gives out the correct output when different inputs are given which are mentioned in Table 5.4. Therefore the program is said to be executed as expected or correct program.
+The model gives out the correct output when different inputs are given which are mentioned in Table. Therefore the program is said to be executed as expected or correct program.
 
-    1. **Confusion Matrix**
+**Confusion Matrix**
 
 A confusion matrix is a technique for summarizing the performance of a classification algorithm.Classification accuracy alone can be misleading if you have an unequal number of observations in each class or if you have more than two classes in your dataset.Calculating a confusion matrix can give you a better idea of what your classification model is getting right and what types of errors it is making.
 
@@ -254,13 +237,11 @@ In our case n=5
 
 0th row - grade1,1st row - grade 2,2nd row - grade 3,3rd row - grade 4,4th row - grade 5
 
-![](RackMultipart20220826-1-yhpwpm_html_7a4d517eea1e78ce.png)
+![Confusion Matrix of Decision Tree](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/dt.png)
 
-** Confusion Matrix of Naïve Bayes**
+![Confusion Matrix of Naïve Bayes](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/nb.png)
 
-![](RackMultipart20220826-1-yhpwpm_html_3c7119729bf40fb1.png)
-
-** Confusion Matrix of Random Forest**
+![Confusion Matrix of Random Forest](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/rf.png)
 
 
 # Conclusion
@@ -271,15 +252,19 @@ Thus, the aim of this project is to predict the damage grade of buildings. The R
 
 **Accuracy comparision**
 
+**Accuracy without folds**
+![Accuracy without folds](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/accuracy.png)
+
+**Accuracy with folds**
+![Accuracy with folds](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/accuracyUsing%20Folds.png)
+
 | **Algorithm** | **Accuracy** |
 | --- | --- |
 | Decision Tree | 66.19 |
 | Naive Bayes | 67.01 |
 | Neural Networks | 70.59 |
 
-![](RackMultipart20220826-1-yhpwpm_html_f0c0314c31f68272.png)
 
-**Accuracy comparision**
 
 ## Future scope
 In future we plan to enable maps and show colors for different grades for different building.And also to host our application on web.Also, in future we would like to collect data from real time database and a dataset with more variation and a higher quality can really boost the accuracy of our current models. Also we think that using more complex models like artificial neural networks, or applying deep learning.
@@ -304,6 +289,5 @@ Due to time and knowledge constraints we could not develop great UI/UX. As an im
 
 **[6]Dezhang Sun, Baitao Sun,**"Rapid prediction of earthquake damage to buildings based on fuzzy analysis"2010 Seventh International Conference on Fuzzy Systems and Knowledge Discovery, vol. 3, p. 1332-1335, 2010.
 
-## [7][https://www.kaggle.com/arpitr07/predict-building-damage-grade/output](https://www.kaggle.com/arpitr07/predict-building-damage-grade/output)
+**[7][https://www.kaggle.com/arpitr07/predict-building-damage-grade/output](https://www.kaggle.com/arpitr07/predict-building-damage-grade/output)
 
-i
