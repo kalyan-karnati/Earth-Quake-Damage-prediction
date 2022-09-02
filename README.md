@@ -237,11 +237,11 @@ In our case n=5
 
 0th row - grade1,1st row - grade 2,2nd row - grade 3,3rd row - grade 4,4th row - grade 5
 
-![Confusion Matrix of Decision Tree](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/dt.png)
+![Confusion Matrix of Decision Tree](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/Pictures/dt.png)
 
-![Confusion Matrix of Naïve Bayes](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/nb.png)
+![Confusion Matrix of Naïve Bayes](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/Pictures/nb.png)
 
-![Confusion Matrix of Random Forest](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/rf.png)
+![Confusion Matrix of Random Forest](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/Pictures/rf.png)
 
 
 # Conclusion
@@ -253,10 +253,10 @@ Thus, the aim of this project is to predict the damage grade of buildings. The R
 **Accuracy comparision**
 
 **Accuracy without folds**
-![Accuracy without folds](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/accuracy.png)
+![Accuracy without folds](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/Pictures/accuracy.png)
 
 **Accuracy with folds**
-![Accuracy with folds](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/accuracyUsing%20Folds.png)
+![Accuracy with folds](https://github.com/kalyan-karnati/Earth-Quake-Damage-prediction/blob/main/Pictures/accuracyUsing%20Folds.png)
 
 | **Algorithm** | **Accuracy** |
 | --- | --- |
